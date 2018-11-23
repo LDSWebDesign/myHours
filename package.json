@@ -1,0 +1,26 @@
+{
+  "name": "myhours-web-application",
+  "version": "1.0.0",
+  "description": "In development Web application to track working hours, work breaks, overtime, weekly pay, monthly pay, total time clocked in and validation against the work statement (Where possible). ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app",
+    "initsql": "mysql -u root -p < myHours.sql"
+  },
+  "author": "Liam Salter",
+  "repository": {
+    "type": "git",
+    "url": "github.com/LDSWebDesign/myHours"
+  },
+  "keywords": [
+    "working",
+    "salary",
+    "tracker"
+  ],
+  "dependencies": {
+    "express": "4.16.3",
+    "mysql2": "1.6.4"
+  },
+  "license": "ISC OR MIT"
+}

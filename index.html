@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title> Webscript </title>
+  <link href="index.css" rel="stylesheet" type="text/css">
+  <script src="app.js"></script>
+</head>
+<body>
+<header>
+    <h1 id="title"> myHours </h1>
+    <h2 id="login"> 
+        User: <input type="text" placeholder="Username">
+        Password: <input type="password" placeholder="Password">
+        <button type="submit" onclick="alert('Login Successful')"> Login </button>
+    </h2>
+</header>
+<main>
+    <div id="create">
+    <h1> Create </h1>
+        <div id="createUser">
+            <form>
+            
+            </form>
+        </div>   
+        <div id="createStore">
+            <form>
+
+            </form>
+        </div>
+        <div id="createJob">
+            <form>
+
+            </form>
+        </div>
+        <div id="createShift">
+            <form>
+
+            </form>
+        </div>
+    </div>
+    <div id="clockIn">
+    <h1> Clock-In</h1>
+        <div>
+            <button type="submit" onclick="alert('You have successfully Clocked-In at XX:XX')"> Clock-In!</button>
+        </div>
+    </div>
+    <div id="view">
+    <h1> View</h1>
+        <form>
+            <select>
+                <option value="user"> User </option>
+                <option value="store"> Store </option>
+                <option value="job"> Job </option>
+                <option value="shift"> Shift </option>
+                <option value="clockedShift"> ClockedShift </option>
+            </select>
+            <input type="search" name="dataSearch">
+        </form>
+    </div>
+</main>
+<footer>
+    <nav id="menu">
+        <a href="#create"> Create </a>
+        <a href="#clockIn"> Clock-In </a>
+        <a href="#view"> View </a>
+    </nav>
+    <a href="https://www.github.com/LDSWebDesign"> Developed & Distributed by: LDSWebDesign </a>
+</footer>
+</body>
