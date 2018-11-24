@@ -18,9 +18,23 @@ connection.query(
     }
   );
 
-app.get('/', (req, res) => res.send('Welcome to myHours.'))
+  app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
+});
+app.listen(port, () => console.log('Example app listening on port ${port}!'));
 
-app.listen(port, () => console.log('Example app listening on port ${port}!'))
+app.use('/static', express.static(path.join(__dirname, 'public')))
+app.get('/home', (req, res) => res.send('index.html'));
 
-app.get('/home', (req, res) => res.send('index.html'))
+let myLabels = document.querySelectorAll('.lbl-toggle');
 
+Array.from(myLabels).forEach(label => {
+  label.addEventListener('keydown', e => {
+    // 32 === spacebar
+    // 13 === enter
+    if (e.which === 32 || e.which === 13) {
+      e.preventDefault();
+      label.click();
+    };
+  });
+});
